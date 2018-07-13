@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1 #{title}
+    br
+    ul
+        each post, i in posts
+            li.card
+                .card-body
+                    h5.card-title= post.author
+                    b.card-text= post.title                
+                    p.card-text= post.description
+                    if post.imagePath !== undefined
+                        img.card-img-bottom(src=post.imagePath, alt='Post image')
+                    hr   
+                    if user  
+                        if user.name == post.author         
+                            a.btn.btn-outline-primary(href='/posts/' + post._id) Edit Post
+                            span &nbsp;&nbsp;
+                            a.btn.btn-danger.delete-post(href='#', data-id=post._id) Delete
+            br
+            br

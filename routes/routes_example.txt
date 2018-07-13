@@ -1,0 +1,32 @@
+
+/abc/def
+
+abc?q=def&y=zsd
+
+
+
+REST
+
+GET /post
+
+GET /post/:id
+
+PUT /post/:id 
+
+PATCH /post/:id
+
+DEL /post/:id
+
+
+
+
+
+
+
+
+
+
+
+
+
+

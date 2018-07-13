@@ -1,0 +1,6 @@
+//- Generating a custom message template
+.messages
+  each type in Object.keys(messages)
+    each message in messages[type]
+        //- Bootstrap alert type will be dynamic
+        div(class="alert alert-" + type) #{message}

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(method='POST', enctype='multipart/form-data', action='/posts')
+        #form-group
+            label Title:
+            input.form-control(name='title', type='text')
+        #form-group
+            label Description:
+            textarea.form-control(name='description')
+        #form-group
+            label Upload Image:
+            input.form-control(name='image', type='file')
+        br
+        input.btn.btn-primary(type='submit', value='Post')
